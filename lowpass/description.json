@@ -1,0 +1,86 @@
+{
+  "parameters": [
+    {
+      "type": "ParameterTypeNumber",
+      "index": 0,
+      "name": "freq",
+      "paramId": "freq",
+      "minimum": 20,
+      "maximum": 20000,
+      "exponent": 1,
+      "steps": 0,
+      "initialValue": 3000,
+      "isEnum": false,
+      "enumValues": [],
+      "displayName": "",
+      "unit": "",
+      "order": 0,
+      "displayorder": "-",
+      "sendinit": true,
+      "initialized": true,
+      "debug": false,
+      "saveable": true,
+      "transmittable": true,
+      "visible": true,
+      "signalIndex": null,
+      "ioType": "IOTypeUndefined",
+      "serialId": "param_s01",
+      "constrainFunc": "param_01_value_constrain"
+    }
+  ],
+  "numParameters": 1,
+  "numSignalInParameters": 0,
+  "numSignalOutParameters": 0,
+  "numInputChannels": 2,
+  "numOutputChannels": 2,
+  "numMidiInputPorts": 0,
+  "numMidiOutputPorts": 0,
+  "externalDataRefs": [],
+  "patcherSerial": 0,
+  "inports": [],
+  "outports": [],
+  "inlets": [
+    {
+      "type": "signal",
+      "index": 1,
+      "tag": "in1",
+      "meta": ""
+    },
+    {
+      "type": "signal",
+      "index": 2,
+      "tag": "in2",
+      "meta": ""
+    }
+  ],
+  "outlets": [
+    {
+      "type": "signal",
+      "index": 1,
+      "tag": "out1",
+      "meta": ""
+    },
+    {
+      "type": "signal",
+      "index": 2,
+      "tag": "out2",
+      "meta": ""
+    }
+  ],
+  "paramConversion": {
+    "applyStepsToNormalizedParameterValue": "function applyStepsToNormalizedParameterValue(normalizedValue, steps) {\r\n    if (steps == 1) {\r\n        if (normalizedValue > 0) {\r\n            normalizedValue = 1.;\r\n        }\r\n    } else {\r\n        let oneStep = 1. / (steps - 1);\r\n        let numberOfSteps = rnbo_fround(normalizedValue / oneStep * 1 / 1) * 1;\r\n        normalizedValue = numberOfSteps * oneStep;\r\n    }\r\n\r\n    return normalizedValue;\r\n}",
+    "convertToNormalizedParameterValue": "function convertToNormalizedParameterValue(index, value) {\r\n    switch (index) {\r\n    case 0:\r\n        {\r\n            value = (value < 20 ? 20 : (value > 20000 ? 20000 : value));\r\n            let normalizedValue = (value - 20) / (20000 - 20);\r\n            return normalizedValue;\r\n        }\r\n    default:\r\n        return value;\r\n    }\r\n}",
+    "convertFromNormalizedParameterValue": "function convertFromNormalizedParameterValue(index, value) {\r\n    value = (value < 0 ? 0 : (value > 1 ? 1 : value));\r\n\r\n    switch (index) {\r\n    case 0:\r\n        {\r\n            value = (value < 0 ? 0 : (value > 1 ? 1 : value));\r\n\r\n            {\r\n                return 20 + value * (20000 - 20);\r\n            }\r\n        }\r\n    default:\r\n        return value;\r\n    }\r\n}",
+    "getNumParameters": "function getNumParameters() {\r\n    return 1;\r\n}",
+    "constrainParameterValue": "function constrainParameterValue(index, value) {\r\n    var v = value;\r\n\r\n    switch (index) {\r\n    case 0:\r\n        {\r\n            v = (v > 20000 ? 20000 : (v < 20 ? 20 : v));\r\n            return v;\r\n        }\r\n    default:\r\n        return value;\r\n    }\r\n}",
+    "subpatches": {},
+    "isPolyphonic": false
+  },
+  "presetid": "rnbo",
+  "meta": {
+    "architecture": "x64",
+    "filename": "Rnbo-ParamEQ.maxpat",
+    "maxversion": "8.5.3",
+    "rnboversion": "1.1.0"
+  }
+}
