@@ -9,7 +9,7 @@
       "maximum": 20000,
       "exponent": 1,
       "steps": 0,
-      "initialValue": 3000,
+      "initialValue": 0,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -79,7 +79,6 @@
   "presetid": "rnbo",
   "meta": {
     "architecture": "x64",
-    "filename": "Rnbo-ParamEQ.maxpat",
     "maxversion": "8.5.3",
     "rnboversion": "1.1.0"
   }

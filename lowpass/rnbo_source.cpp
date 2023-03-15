@@ -127,20 +127,16 @@ template <typename T> void listswapelements(T& arr, Int a, Int b) {
     arr[(Index)b] = tmp;
 }
 
+inline number safesqrt(number num) {
+    return (num > 0.0 ? rnbo_sqrt(num) : 0.0);
+}
+
 SampleIndex currentsampletime() {
     return this->audioProcessSampleCount + this->sampleOffsetIntoNextAudioBuffer;
 }
 
 number mstosamps(MillisecondTime ms) {
     return ms * this->sr * 0.001;
-}
-
-inline number safesqrt(number num) {
-    return (num > 0.0 ? rnbo_sqrt(num) : 0.0);
-}
-
-Index vectorsize() {
-    return this->vs;
 }
 
 MillisecondTime currenttime() {
@@ -433,7 +429,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
         case 0:
             {
             info->type = ParameterTypeNumber;
-            info->initialValue = 3000;
+            info->initialValue = 0;
             info->min = 20;
             info->max = 20000;
             info->exponent = 1;
@@ -571,26 +567,7 @@ void processOutletEvent(
     this->processOutletAtCurrentTime(sender, index, value);
 }
 
-void processNumMessage(MessageTag tag, MessageTag objectId, MillisecondTime time, number payload) {
-    this->updateTime(time);
-
-    switch (tag) {
-    case TAG("valin"):
-        {
-        if (TAG("number_obj-37") == objectId)
-            this->numberobj_01_valin_set(payload);
-
-        break;
-        }
-    case TAG("format"):
-        {
-        if (TAG("number_obj-37") == objectId)
-            this->numberobj_01_format_set(payload);
-
-        break;
-        }
-    }
-}
+void processNumMessage(MessageTag , MessageTag , MillisecondTime , number ) {}
 
 void processListMessage(MessageTag , MessageTag , MillisecondTime , const list& ) {}
 
@@ -598,26 +575,7 @@ void processBangMessage(MessageTag , MessageTag , MillisecondTime ) {}
 
 MessageTagInfo resolveTag(MessageTag tag) const {
     switch (tag) {
-    case TAG("valout"):
-        {
-        return "valout";
-        }
-    case TAG("number_obj-37"):
-        {
-        return "number_obj-37";
-        }
-    case TAG("setup"):
-        {
-        return "setup";
-        }
-    case TAG("valin"):
-        {
-        return "valin";
-        }
-    case TAG("format"):
-        {
-        return "format";
-        }
+
     }
 
     return "";
@@ -647,15 +605,10 @@ void param_01_value_set(number v) {
         this->param_01_lastValue = this->param_01_value;
     }
 
-    this->numberobj_01_value_set(v);
-}
-
-void numberobj_01_valin_set(number v) {
-    this->numberobj_01_value_set(v);
-}
-
-void numberobj_01_format_set(number v) {
-    this->numberobj_01_currentFormat = rnbo_trunc((v > 6 ? 6 : (v < 0 ? 0 : v)));
+    {
+        list converted = {v};
+        this->line_01_segments_set(converted);
+    }
 }
 
 void line_01_target_bang() {}
@@ -690,9 +643,7 @@ Index getNumOutputChannels() const {
 
 void allocateDataRefs() {}
 
-void initializeObjects() {
-    this->numberobj_01_init();
-}
+void initializeObjects() {}
 
 void sendOutlet(OutletIndex index, ParameterValue value) {
     this->getEngine()->sendOutlet(this, index, value);
@@ -767,26 +718,6 @@ void line_01_segments_set(const list& v) {
             lastRampValue = destinationValue;
         }
     }
-}
-
-void numberobj_01_output_set(number v) {
-    {
-        list converted = {v};
-        this->line_01_segments_set(converted);
-    }
-}
-
-void numberobj_01_value_set(number v) {
-    this->numberobj_01_value_setter(v);
-    v = this->numberobj_01_value;
-    number localvalue = v;
-
-    if (this->numberobj_01_currentFormat != 6) {
-        localvalue = rnbo_trunc(localvalue);
-    }
-
-    this->getEngine()->sendNumMessage(TAG("valout"), TAG("number_obj-37"), localvalue, this->_currentTime);
-    this->numberobj_01_output_set(localvalue);
 }
 
 void line_01_perform(SampleValue * out, Index n) {
@@ -947,16 +878,6 @@ void stackprotect_perform(Index n) {
     this->stackprotect_count = __stackprotect_count;
 }
 
-void numberobj_01_value_setter(number v) {
-    number localvalue = v;
-
-    if (this->numberobj_01_currentFormat != 6) {
-        localvalue = rnbo_trunc(localvalue);
-    }
-
-    this->numberobj_01_value = localvalue;
-}
-
 void biquad_tilde_01_reset() {
     this->biquad_tilde_01_x1 = 0;
     this->biquad_tilde_01_x2 = 0;
@@ -985,33 +906,6 @@ void biquad_tilde_02_dspsetup(bool force) {
 
     this->biquad_tilde_02_reset();
     this->biquad_tilde_02_setupDone = true;
-}
-
-void numberobj_01_init() {
-    this->numberobj_01_currentFormat = 6;
-    this->getEngine()->sendNumMessage(TAG("setup"), TAG("number_obj-37"), 1, this->_currentTime);
-}
-
-void numberobj_01_getPresetValue(PatcherStateInterface& preset) {
-    preset["value"] = this->numberobj_01_value;
-}
-
-void numberobj_01_setPresetValue(PatcherStateInterface& preset) {
-    if ((bool)(stateIsEmpty(preset)))
-        return;
-
-    this->numberobj_01_value_set(preset["value"]);
-}
-
-void param_01_getPresetValue(PatcherStateInterface& preset) {
-    preset["value"] = this->param_01_value;
-}
-
-void param_01_setPresetValue(PatcherStateInterface& preset) {
-    if ((bool)(stateIsEmpty(preset)))
-        return;
-
-    this->param_01_value_set(preset["value"]);
 }
 
 array<number, 5> filtercoeff_01_localop_next(number frequency, number q, number gain, number type) {
@@ -1262,12 +1156,23 @@ void filtercoeff_01_dspsetup(bool force) {
         return;
 
     {
-        this->filtercoeff_01_activeResamp = this->vectorsize();
+        this->filtercoeff_01_activeResamp = 512;
     }
 
     this->filtercoeff_01_resamp_counter = 0;
     this->filtercoeff_01_setupDone = true;
     this->filtercoeff_01_localop_dspsetup();
+}
+
+void param_01_getPresetValue(PatcherStateInterface& preset) {
+    preset["value"] = this->param_01_value;
+}
+
+void param_01_setPresetValue(PatcherStateInterface& preset) {
+    if ((bool)(stateIsEmpty(preset)))
+        return;
+
+    this->param_01_value_set(preset["value"]);
 }
 
 number globaltransport_getTempoAtSample(SampleIndex sampleOffset) {
@@ -1520,14 +1425,12 @@ void assign_defaults()
     biquad_tilde_02_a2 = 0;
     biquad_tilde_02_b1 = 0;
     biquad_tilde_02_b2 = 0;
-    numberobj_01_value = 0;
-    numberobj_01_value_setter(numberobj_01_value);
-    param_01_value = 3000;
-    line_01_time = 10;
     filtercoeff_01_frequency = 1000;
     filtercoeff_01_gain = 1;
     filtercoeff_01_q = 1;
     filtercoeff_01_type = 0;
+    line_01_time = 10;
+    param_01_value = 0;
     _currentTime = 0;
     audioProcessSampleCount = 0;
     sampleOffsetIntoNextAudioBuffer = 0;
@@ -1554,13 +1457,11 @@ void assign_defaults()
     biquad_tilde_02_y1 = 0;
     biquad_tilde_02_y2 = 0;
     biquad_tilde_02_setupDone = false;
-    numberobj_01_currentFormat = 6;
-    numberobj_01_lastValue = 0;
-    param_01_lastValue = 0;
-    line_01_currentValue = 20000;
     filtercoeff_01_K_EPSILON = 1e-9;
     filtercoeff_01_localop_internal = true;
     filtercoeff_01_setupDone = false;
+    line_01_currentValue = 20000;
+    param_01_lastValue = 0;
     globaltransport_tempo = nullptr;
     globaltransport_tempoNeedsReset = false;
     globaltransport_lastTempo = 120;
@@ -1591,14 +1492,13 @@ void assign_defaults()
     number biquad_tilde_02_a2;
     number biquad_tilde_02_b1;
     number biquad_tilde_02_b2;
-    number numberobj_01_value;
-    number param_01_value;
-    list line_01_segments;
-    number line_01_time;
     number filtercoeff_01_frequency;
     number filtercoeff_01_gain;
     number filtercoeff_01_q;
     Int filtercoeff_01_type;
+    list line_01_segments;
+    number line_01_time;
+    number param_01_value;
     MillisecondTime _currentTime;
     SampleIndex audioProcessSampleCount;
     SampleIndex sampleOffsetIntoNextAudioBuffer;
@@ -1620,11 +1520,6 @@ void assign_defaults()
     number biquad_tilde_02_y1;
     number biquad_tilde_02_y2;
     bool biquad_tilde_02_setupDone;
-    Int numberobj_01_currentFormat;
-    number numberobj_01_lastValue;
-    number param_01_lastValue;
-    list line_01_activeRamps;
-    number line_01_currentValue;
     number filtercoeff_01_resamp_counter;
     number filtercoeff_01_activeResamp;
     number filtercoeff_01_K_EPSILON;
@@ -1651,6 +1546,9 @@ void assign_defaults()
     number filtercoeff_01_localop_lb1;
     number filtercoeff_01_localop_lb2;
     bool filtercoeff_01_setupDone;
+    list line_01_activeRamps;
+    number line_01_currentValue;
+    number param_01_lastValue;
     signal globaltransport_tempo;
     bool globaltransport_tempoNeedsReset;
     number globaltransport_lastTempo;
