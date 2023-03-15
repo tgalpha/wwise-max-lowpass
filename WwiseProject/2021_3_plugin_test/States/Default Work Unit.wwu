@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D8EB6C14-5F9F-4267-A67E-BDF438B45AC5}" SchemaVersion="103">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{D8EB6C14-5F9F-4267-A67E-BDF438B45AC5}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="EQ_Type" ID="{4B24EA58-E6F2-4BCA-A274-B38B921B3DB2}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{76E60F75-A2AD-49BB-8DA3-36CFDC805BB8}"/>
+						<State Name="Org" ID="{8EF870BE-28E9-4A5B-8533-A793A47CF2BD}"/>
+						<State Name="Max" ID="{7F761DF5-4B6B-4584-9054-27643126A5A5}"/>
+						<State Name="Bypass" ID="{CE0C478C-1960-4B76-94C2-00D3CD9012D1}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

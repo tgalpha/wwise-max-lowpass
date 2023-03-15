@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1429EF71-C445-4E88-BAF7-77A8AFEF4E9A}" SchemaVersion="103">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{1429EF71-C445-4E88-BAF7-77A8AFEF4E9A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{23B6740F-2D43-4367-A7D0-73B0BFBF13C9}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="BatchPlay" ID="{90816B72-C794-485C-B08E-CE01E348554A}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="StopAll" ID="{606CCB8F-30D5-4B4D-B99C-E312A176C7C9}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_synthOne" ID="{749B776B-DC5B-4FC7-87D3-7921F3D9B604}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="ClientId" ID="{3F2F5452-603E-43AF-A406-71A4428B9EF9}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Org" ID="{8EF870BE-28E9-4A5B-8533-A793A47CF2BD}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

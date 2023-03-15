@@ -1,0 +1,7 @@
+.cache
+*.akd
+*.validationcache
+*.wsettings
+*.prof
+
+GeneratedSoundBanks

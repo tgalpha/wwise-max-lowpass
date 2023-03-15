@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{53F3DE93-0296-4F39-935C-0D0408D39E63}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{53F3DE93-0296-4F39-935C-0D0408D39E63}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_synthOne" ID="{749B776B-DC5B-4FC7-87D3-7921F3D9B604}">
+					<ChildrenList>
+						<Action Name="" ID="{2FD87A1E-0A14-417F-BC82-EAF58C39AE12}" ShortID="839868533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="synthOne" ID="{6F43F62E-5F18-4B68-A1A8-E5AD19610A55}" WorkUnitID="{498AB772-C8B1-462E-84D3-4B328093B50A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}">
+					<ChildrenList>
+						<Action Name="" ID="{7A6C1502-DE65-4B59-BAC9-340D816660F4}" ShortID="465784776">
+							<PropertyList>
+								<Property Name="SeekPercent" Type="Real64" Value="30"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HeavensBells" ID="{0F1DB396-922E-4718-A17F-37D6C1EE84CA}" WorkUnitID="{498AB772-C8B1-462E-84D3-4B328093B50A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BatchPlay" ID="{90816B72-C794-485C-B08E-CE01E348554A}">
+					<ChildrenList>
+						<Action Name="" ID="{D3586C67-76BC-471F-86D8-C8325AEAAD91}" ShortID="304139948">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2F6ED99C-519C-48AF-B46F-0DC6DBE2E795}" ShortID="826446397">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7BF8B1EA-4262-447F-8552-68BB7771FC82}" ShortID="855350884">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0B8B1E6F-CAA8-4DB2-8A73-097550F6A900}" ShortID="893500865">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DA41302E-C05C-41E1-BB99-3786AA6DC98A}" ShortID="22767246">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E7A26FAA-F23D-4244-A3AE-C9C5188DC220}" ShortID="63110829">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CEFA6C8B-CBBF-4261-A6CA-FE302EC34187}" ShortID="741731914">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F24FE5FF-55E2-4942-92EA-3C10E17A36C1}" ShortID="300035081">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6F04FBFF-4F32-46E4-8B88-42454D396A22}" ShortID="657629780">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D66ED0BD-255D-4D81-A94E-BA888752A9BD}" ShortID="670780460">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FACC29F8-D24B-47F9-A08D-1CDF1B7EEFD1}" ShortID="919104383">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8A5B77FF-C302-4E7B-8CB1-5AE53418E7B0}" ShortID="584049185">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8C74ACBD-10A3-4441-B1CE-53E3EDE7DA96}" ShortID="344961323">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8588E5AF-5157-4ADA-A55D-96AD2DBF304A}" ShortID="653510568">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ED17BD4D-8296-4E14-96D1-3E8A1E317281}" ShortID="236355580">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C092BDE1-DBF5-4F28-B5B8-D73891889314}" ShortID="735805911">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2FFF7D33-E0FD-4769-AB12-AA82901D4C6C}" ShortID="579106924">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2BB769AC-F612-47A6-BB12-2F8A637E7BEB}" ShortID="555614842">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9582CBD4-0B45-477C-AF7D-3629AD2340CC}" ShortID="782883233">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{05164E2E-B9DD-4B26-91BE-B4614FE9C93C}" ShortID="389207277">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{145D529C-6DA5-4FCD-98E2-C587C4C689E1}" ShortID="675724898">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{031DDE0C-34A7-4AC1-B156-6BF41A288683}" ShortID="987274328">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9EC94A16-3FB7-4F81-9FA2-EA571C6F56CA}" ShortID="60452488">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4F56D9E4-5A62-4AE3-8D5F-69406131DDA8}" ShortID="20635783">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1E84B00F-1557-4438-A8A4-D5830AE59FCD}" ShortID="1064611526">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{83778273-70B6-4EB7-85E7-994EC09BD669}" ShortID="22131873">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8E45CBF4-E4C3-43FD-85FD-7E87B270E65A}" ShortID="698353856">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FF4B66DB-2511-4221-9110-E12969538B3B}" ShortID="206679059">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{55A47410-694B-41C4-8547-D9B122F8BBFF}" ShortID="369013072">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6AE44B86-B1C0-43A4-BFCE-FFE8EBC3D778}" ShortID="535612481">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8CC27F71-7BE1-4C2A-8D57-12B740FC8E7B}" ShortID="273916194">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B118042D-DC53-4565-B137-48CA4E45D92C}" ShortID="33521174">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C0A392EB-BB06-4EA4-83B9-ED2D6E89A526}" ShortID="260289625">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{63EF8E83-E280-41ED-AFC6-1C645023D156}" ShortID="85066845">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EB8351F3-9F6B-49E9-AEC7-FBB977D5BF9F}" ShortID="104746902">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{52239E51-F4E4-447C-8CE4-82C9ED2542D2}" ShortID="720759154">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44F688A2-C264-45B0-BEDF-944D34D457F6}" ShortID="313223070">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DF17FE7A-5B7F-4DFF-91C7-F2492D5E255D}" ShortID="284545054">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9A5073F4-B430-4F46-BF45-DD97210A79DC}" ShortID="888821093">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DD4A9F62-6795-4B4B-822A-1801212984CB}" ShortID="1048154649">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_HeavensBells" ID="{A122EA9A-8CB9-42AB-AB61-94ABB9135090}" WorkUnitID="{53F3DE93-0296-4F39-935C-0D0408D39E63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopAll" ID="{606CCB8F-30D5-4B4D-B99C-E312A176C7C9}">
+					<ChildrenList>
+						<Action Name="" ID="{AF63C31A-0464-4497-B258-6B2E339AB080}" ShortID="703889069">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
