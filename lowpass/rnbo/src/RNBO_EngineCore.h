@@ -537,21 +537,22 @@ namespace RNBO {
 				beginProcessDataRefs();
 
 				// take midiInput events and fill them into _scheduledEvents
-				if (midiInput) {
-					for (MidiEventList::ConstIterator it = midiInput->begin(); it != midiInput->end(); it++) {
-						_scheduledEvents.addEvent(MidiEvent(*it));
-					}
-				}
-				_midiOutput = midiOutput;
+				// if (midiInput) {
+				// if (midiInput) {
+				// 	for (MidiEventList::ConstIterator it = midiInput->begin(); it != midiInput->end(); it++) {
+				// 		_scheduledEvents.addEvent(MidiEvent(*it));
+				// 	}
+				// }
+				// _midiOutput = midiOutput;
 
 				// get all events from the queues and schedule them to _scheduledEvents
-				drainParameterQueues();
+				// drainParameterQueues();
 
-				processEventsUntil(endTime);
+				// processEventsUntil(endTime);
 
 				processCore(audioInputs, numInputs, audioOutputs, numOutputs, sampleFrames);
 
-				notifyOutgoingEvents();
+				// notifyOutgoingEvents();
 				endProcessDataRefs();
 			}
 			else {
