@@ -50,7 +50,7 @@ Plugin.sdk.static.files = -- https://github.com/premake/premake-core/wiki/files
     "**.c",
     "../lowpass/rnbo/RNBO.h",
     "../lowpass/rnbo/common/*.h",
-    "../lowpass/*.cpp",
+    "../lowpass/rnbo.param.eq.cpp",
     "../lowpass/rnbo/RNBO.cpp",
 }
 Plugin.sdk.static.excludes = -- https://github.com/premake/premake-core/wiki/removefiles
